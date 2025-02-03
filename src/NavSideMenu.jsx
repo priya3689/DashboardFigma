@@ -21,12 +21,14 @@ import {
   DollarSign,
   LayoutTemplateIcon,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export function NavSideMenu() {
   const [open, setOpen] = React.useState(0);
-
-  const handleOpen = (value) => {
+  const navigate = useNavigate();
+  const handleOpen = (value,navVal) => {
     setOpen(open === value ? 0 : value);
+    if(navVal && value){ navigate(navVal);} 
   };
 
   return (
@@ -46,7 +48,7 @@ export function NavSideMenu() {
         >
           <ListItem className="p-0" selected={open === 1}>
             <AccordionHeader
-              onClick={() => handleOpen(1)}
+              onClick={() => handleOpen(1,"/")}
               className={`${
                 open === 1
                   ? "text-[#CB3CFF]"
@@ -89,7 +91,7 @@ export function NavSideMenu() {
         >
           <ListItem className="p-0" selected={open === 2}>
             <AccordionHeader
-              onClick={() => handleOpen(2)}
+              onClick={() => handleOpen(2,"/Page1")}
               className={`${
                 open === 2
                   ? "text-[#CB3CFF]"
@@ -203,7 +205,7 @@ export function NavSideMenu() {
         >
           <ListItem className="p-0" selected={open === 5}>
             <AccordionHeader
-              onClick={() => handleOpen(4)}
+              onClick={() => handleOpen(5)}
               className={`${
                 open === 5
                   ? "text-[#CB3CFF]"

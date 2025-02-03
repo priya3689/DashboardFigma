@@ -1,8 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
-@theme{
- --font-noto: "Noto Sans Mono", serif;   
-}
+
 .bg-customBlue {
     background-color: #081028;
   }

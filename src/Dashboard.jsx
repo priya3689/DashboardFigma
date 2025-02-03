@@ -1,10 +1,9 @@
 import { ArrowDown, CirclePlus,  EyeIcon,  MoveDownRight, MoveUpRight, Star, User } from "lucide-react"
-import Chart1 from "./Charts/Chart1"
 
 
 function Dashboard() {
   return (
-    <div className="py-4 px-10 w-full">
+    <>
       {/* DashBoard header */}
       <div className="flex flex-col lg:flex-row justify-between  items-center gap-2">
         <div>
@@ -66,13 +65,8 @@ function Dashboard() {
       </div>
           
     </div>
-   {/* Pages Section */}
-   <div className="">
-    <div className="w-2/3 "><Chart1/></div>
-    
-    </div>
-
-    </div>
+  
+</>
   )
 }
 

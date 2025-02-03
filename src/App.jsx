@@ -1,15 +1,16 @@
-import Dashboard from "./Dashboard"
-import Nav from "./Nav"
+import { RouterProvider } from "react-router-dom"
+import router from "./Router/router"
+import { Suspense } from "react"
+
 
 
 function App() {
   
   return (
-   
-      <div className=" mx-auto flex flex-row bg-[#081028] text-white">
-        <Nav/>
-        <Dashboard/> 
-      </div>
+    <Suspense fallback={<div className="text-9xl text-pink-600">Loading........</div>}> 
+       <RouterProvider router={router} />
+    </Suspense>
+
    
   )
 }
